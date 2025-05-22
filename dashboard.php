@@ -20,6 +20,6 @@
       <h2>Sebuah aplikasi yang menyajikan data posyandu</h2>
     </section>
     <button onclick="window.location.href='manage.php'">Form Tambah Bayi</button>
-<body>
+  </main>
 </body>
 </html>
