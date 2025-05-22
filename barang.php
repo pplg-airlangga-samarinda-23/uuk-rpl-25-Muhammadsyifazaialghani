@@ -38,10 +38,13 @@ $rows = $koneksi->execute_query($sql, []);
             <tr>
                 <td><?= $no; ?></td>
                 <td><?= $kader["nama"]; ?></td>
-                <td><?= $kader["password"]; ?></td>
+                <td><?= $kader["tanggal_lahir"]; ?></td>
+                <td><?= $kader["alamat_rumah"]; ?></td>
+                <td><?= $kader["berat_badan"]; ?></td>
+                <td><?= $kader["tinggi_badan"]; ?></td>
                 <td>
-                    <a href="kader-edit.php?id=<?=$kader['id']?>">Edit</a>
-                    <a href="kader-hapus.php?id=<?=$kader['id']?>">Hapus</a>
+                    <a href="barang-edit.php?id=<?=$kader['id']?>">Edit</a>
+                    <a href="barang-hapus.php?id=<?=$kader['id']?>">Hapus</a>
                 </td>
             </tr>
 
