@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main>
+    </header>
     <section class="form-tambah">
       <h3>Form Tambah Bayi</h3>
       <form>
@@ -18,5 +20,6 @@
         <button type="submit">Input</button>
       </form>
     </section>
+  </main>
 </body>
 </html>
