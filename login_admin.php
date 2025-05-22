@@ -1,17 +1,17 @@
 <?php
 session_start();
-include 'koneksi.php'; // pastikan koneksi.php benar
+include 'koneksi.php'; // 
 
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Cek user dari database
+    // 
     $query = mysqli_query($koneksi, "SELECT * FROM login_admin WHERE username='$username'");
     if (mysqli_num_rows($query) == 1) {
         $user = mysqli_fetch_assoc($query);
         if (password_verify($password, $user['password'])) {
-            // Login sukses
+            // 
             $_SESSION['id'] = $user['id'];
             $_SESSION['role'] = $user['role'];
             header("Location: dashboard.php");
