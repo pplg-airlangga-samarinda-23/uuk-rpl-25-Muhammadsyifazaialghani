@@ -22,6 +22,7 @@ $rows = $koneksi->execute_query($sql, []);
     <table>
         <thead>
             <tr>
+                <th>No</th>
                 <th>Nama</th>
                 <th>Tanggal lahir</th>
                 <th>Alamat Rumah</th>
