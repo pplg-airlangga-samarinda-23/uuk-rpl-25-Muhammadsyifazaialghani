@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location:manage.php");
-    exit();
-}
+require "koneksi.php";
+
+$sql = "SELECT * FROM data_anak";
+
+$rows = $koneksi->execute_query($sql, []);
 ?>
 
 <!DOCTYPE html>
@@ -32,16 +32,16 @@ if (!isset($_SESSION['username'])) {
         <tbody>
             <?php
             $no = 1;
-            while ($item = $rows->fetch_assoc()) {
+            while ($kader = $rows->fetch_assoc()) {
             ?>
 
             <tr>
                 <td><?= $no; ?></td>
-                <td><?= $item["nama"]; ?></td>
-                <td><?= $item["password"]; ?></td>
+                <td><?= $kader["nama"]; ?></td>
+                <td><?= $kader["password"]; ?></td>
                 <td>
-                    <a href="barang-edit.php?id=<?=$kader['id']?>">Edit</a>
-                    <a href="barang-hapus.php?id=<?=$kader['id']?>">Hapus</a>
+                    <a href="kader-edit.php?id=<?=$kader['id']?>">Edit</a>
+                    <a href="kader-hapus.php?id=<?=$kader['id']?>">Hapus</a>
                 </td>
             </tr>
 

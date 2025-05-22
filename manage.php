@@ -1,3 +1,12 @@
+<?php
+require 'koneksi.php';
+
+session_start();
+if (isset($_SESSION['admin'])) {
+    header("Location:barang.php");
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +20,7 @@
     </header>
     <section class="form-tambah">
       <h3>Form Tambah Bayi</h3>
-      <form>
+      <form method="POST" action="barang.php">
         <input type="text" placeholder="Masukkan Nama Bayi" required> <br>
         <input type="date" placeholder="Masukkan Tanggal Lahir" required> <br>
         <input type="text" placeholder="Masukkan Alamat Rumah" required> <br>
